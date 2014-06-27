@@ -10,6 +10,6 @@ var reviewSchema = new Schema({
   updatedAt: { type: Date, default: Date.now }
 });
 
-var Review = new mongoose.model('Review', reviewSchema);
+var Review = mongoose.model('Review', reviewSchema);
 
 module.exports = Review;

@@ -11,6 +11,6 @@ var bakerySchema = new Schema({
   updatedAt: { type: Date, default: Date.now }
 });
 
-var Bakery = new mongoose.model('Bakery', bakerySchema);
+var Bakery = mongoose.model('Bakery', bakerySchema);
 
 module.exports = Bakery;
