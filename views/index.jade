@@ -2,11 +2,15 @@ extends layout
 
 block content
 
-  div#instruction-box
-    h5 Please make your way to:
+  if user
+    div#instruction-box
+      h5 Please make your way to:
 
-    div.bakery-info
-      p Here, we will have some bakery information!
+      div.bakery-info
+        p Here, we will have some bakery information!
 
-    div.feedback-form
-      p Here, we'll render the feedback form!
+      div.feedback-form
+        p Here, we'll render the feedback form!
+  else
+    div#login
+      h5 Here we will render login form
