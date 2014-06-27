@@ -13,6 +13,7 @@ var app = express();
 require('./routes/index')(app);
 // above line replaces line immediately below
 // var routes = require('./routes/index');
+
 // var users = require('./routes/users');
 
 // view engine setup
@@ -25,6 +26,8 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded());
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+
+// GIVEN, not using:
 
 // app.use('/', routes);
 // app.use('/users', users);
