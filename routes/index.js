@@ -96,20 +96,30 @@ module.exports = function(app) {
     Bakery.find({}, function(err, allBakeries) {
       if (err) {
         // please god implement some error handling
-        console.log("BAKERY RETRIEVAL ERROR HALP")
-        console.log(err)
+        console.log("BAKERY RETRIEVAL ERROR HALP");
+        console.log(err);
         return;
       } else {
         if(allBakeries.length == 0) {
           createBakeries();
         } else {
-          console.log("bakeries length is not zero")
+          console.log("bakeries length is not zero");
         }
         console.log("no errors");
       }
     });
 
     res.render('index', { title: 'Chicago Bakery Hunt' });
+  });
+
+  app.get('/bakeries/:name', function(req, res) {
+    Bakery.findOne({"name": req.params.name}, function(err, bakery){
+      if(err){
+        console.log(err);
+      } else {
+        res.json(bakery);
+      }
+    })
   });
 
   app.get('/admin/users', function(req, res){
