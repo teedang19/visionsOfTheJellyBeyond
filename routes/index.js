@@ -1,7 +1,24 @@
+var User = require('../models/user');
+
 module.exports = function(app) {
 
   app.get('/', function(req, res) {
-    res.render('index', { title: 'Chicago Bakery Hunt' });
+
+    User.find(function(err, allUsers) {
+      if (err) {
+        // please god implement some error handling
+        conosle.log("ERROR ERROR HALP")
+        console.log(err)
+        return;
+      } else {
+        // check if allUsers is empty
+        // if so, populate database
+        // if not, uhm, continue ...
+        console.log("no errors");
+        res.render('index', { title: 'Chicago Bakery Hunt' });
+      }
+    });
+
   });
 
 }
