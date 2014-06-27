@@ -7,6 +7,7 @@ var bakerySchema = new Schema({
   website: String,
   contactName: String,
   description: String,
+  treatDescription: String,
   createdAt: { type: Date, default: Date.now },
   updatedAt: { type: Date, default: Date.now }
 });
