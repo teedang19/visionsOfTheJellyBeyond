@@ -9,9 +9,8 @@ html
     script(src='/javascripts/client.js')
     script(src='/javascripts/init.js')
   body
-    h1= title
-
-    div#welcome
-      h3 Welcome, user!
+    include header
 
     block content
+
+    include footer
