@@ -21,7 +21,7 @@ var ReviewsCollection = Backbone.Collection.extend({
 
 // BAKERY STUFF
 var Bakery = Backbone.Model.extend({
-  idAttribute: "_id",
+  idAttribute: "name",
   urlRoot: "/bakeries"
 });
 
@@ -54,10 +54,14 @@ var AppRouter = Backbone.Router.extend({
   routes: {
     "": "index"
   },
+
   index: function() {
     var bangBang = new Bakery( {"name":"Bang Bang Pie Shop"} );
-    bangBang.fetch();
-    var bakeryView = new BakeryView( {model: bangBang} );
-    $('.bakery-info').html(bakeryView.render().el);
+    bangBang.fetch({
+      success: function(bakery){
+        var bakeryView = new BakeryView( {model: bakery} );
+        $('.bakery-info').html(bakeryView.render().el);
+      }
+    });
   }
 });
