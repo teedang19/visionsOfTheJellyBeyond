@@ -12,8 +12,14 @@ module.exports = function(app) {
         return;
       } else {
         // check if allUsers is empty
-        // if so, populate database
+        if(allUsers.length == 0) {
+          // if so, populate database
+          console.log("length is zero");
+        } else {
         // if not, uhm, continue ...
+          console.log("length is not zero")
+        }
+        
         console.log("no errors");
         res.render('index', { title: 'Chicago Bakery Hunt' });
       }
