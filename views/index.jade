@@ -1,13 +1,20 @@
 extends layout
 
-block content
+block index
 
-  if user
-    div#instruction-box
+  if true
+    // 'if true' for test purposes only; will be if user (to see if logged in)
+    div#instructions-box
       h5 Please make your way to:
 
       div.bakery-info
-        p Here, we will have some bakery information!
+        script(id='bakery-template', type='text/x-handlebars-meaningless-type')
+          h3 Bakery Name: {{name}}
+          p Address: {{address}}
+          p Website: {{website}}
+          p Contact Name: {{contactName}}
+          p Description: {{description}}
+          p Not sure which delicious item to try? How about a {{treatDescription}}
 
       include form
   else
