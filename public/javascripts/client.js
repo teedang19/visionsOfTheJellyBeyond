@@ -1,12 +1,47 @@
+$.fn.serializeObject = function() {
+  var o = {};
+  var a = this.serializeArray();
+  $.each(a, function() {
+      if (o[this.name] !== undefined) {
+          if (!o[this.name].push) {
+              o[this.name] = [o[this.name]];
+          }
+          o[this.name].push(this.value || '');
+      } else {
+          o[this.name] = this.value || '';
+      }
+  });
+  return o;
+};
+
 // USER STUFF
 var User = Backbone.Model.extend({
-  idAttribute: "_id",
+  idAttribute: "username",
   urlRoot: "/users"
 });
 
 var UsersCollection = Backbone.Collection.extend({
   model: User,
   url: "/admin/users" // idk
+});
+
+var LoginView = Backbone.View.extend({
+  el: '#login',
+  events: {
+    'submit #login-form': 'findUser'
+  },
+
+  findUser: function(event){
+    event.preventDefault();
+    var loginDetails = $(event.currentTarget).serializeObject();
+    console.log(loginDetails);
+    var user = new User(loginDetails);
+    user.fetch({
+      data: {password: loginDetails.password},
+      success: function(user){
+      }
+    })
+  }
 });
 
 // REVIEW STUFF 
@@ -63,5 +98,6 @@ var AppRouter = Backbone.Router.extend({
         $('.bakery-info').html(bakeryView.render().el);
       }
     });
-  }
+  },
+
 });
