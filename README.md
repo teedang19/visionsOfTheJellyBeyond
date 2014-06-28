@@ -60,7 +60,7 @@ anyone can read the docs and hack together some models, pass them to a view ... 
 **Things I hate most about this code:**
 + **modularization, organization**  
 The immediate choice between hacking further on this project to implement more functionality, or learning more about the design of node/Backbone applications to better modularize & DRY up this app has a clear winner: **THE LATTER.** Ew, geeze, everything just exists in two huge files: `routes/index.js` and `public/javascripts/client.js`. THEY DON'T EVEN HAVE DESCRIPTIVE NAMES (that's because they do ten million things, each). I also had a probem with module loading and tried to look into a few module loaders ...
-+ **test-less*  
++ **test-less**  
 I'm trying to strike a balance between learning a new language/framework and using TDD. Conundrum: if I don't know how something is supposed to work, how can I test it before I write it? Eek.
 
 I'm really glad to have hacked on this challenge.  It was fun and I cannot believe how much I learned. I suspect I will continue with it, once it's been reviewed by my fate-masters.  Thank you for letting me participate :)
