@@ -30,6 +30,7 @@ Now you have a mongod connection open.  Keep it open! From the app root directio
 Navigate to `localhost:3000` and you should be running.
 
 To experience the only other functionality of this app, you have to manually edit the code (I know, bummer.) Navigate to `views/index.jade` and change the first line to `if true` to make the template block run. Backbone fetches a model -- it is located and returned from server -- and the Backbone View is compiled by Handlebars and rendered! Hoorah. (No, seriously -- *Hoorah!*)
+
 =======================
 
 **I had 24 hours to write this program using Backbone.js on the front-end and Node.js on the back-end.**
