@@ -38,11 +38,11 @@ Total experience using Node before this challenge: **2 hours**
 
 *Wheeeeeeew.*
 
-Things I'm proud of:
-+ using mongoose models and schemas `models/`
+**Things I'm proud of:**  
++ effectively using mongoose models and schemas: `models/`
 + data: navigating, storing to, and retreiving from a mongoDB
 + accurately fetching Backbone Models and passing them to Backbone Views
 + kind-of figuring out Jade templating
-+ figuring out Handlebars
++ using Handlebars
 
-*Every single bullet point I just listed was something I had never done before.* Most of my previous experience is building Ruby/Rails applications. I'm really happy my 
+*Every single bullet point I just listed was something I had never done before.* Most of my previous experience is building Ruby/Rails applications. I'm really freakin' happy that my front-end talks to my back-end.
