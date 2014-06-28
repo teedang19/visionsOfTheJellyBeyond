@@ -54,5 +54,11 @@ Total experience using Node before this challenge: **2 hours**
 **Huge Road Blocks:**
 + **SESSIONS & cookie storage.**  
 what .. the .. *hell.* I've been spoiled by the Sinatra / Rails Sessions hash. I failed to figure out node/express sessions before the 24 hours was up. This is why you cannot login.
-+ **General understanding of Backbone.js**  
-anyone can read the docs and hack together some models, pass them to a view ... but what is *truly* going on?
++ **General understanding of Backbone.js/Node.js**  
+anyone can read the docs and hack together some models, pass them to a view ... but what is *truly* going on? This is something I always need to know, and it's not easy to figure out in a short time span. Example: I tried to hook in to the post route of my login form directly from the HTTP request, since it was not contained in a Backbone View element nor (originally) hooked to a Backbone Model. I *suspect* this is not allowed once you have a Backbone Router listening as well as a Backbone History started, because the request would occur but none of my params would come through. Wrapping it in Backbone View did the trick .. until I met the session-cookie monster.
+
+**What I hate most about this code:**
++ **Modularization, Organization**  
+The immediate choice between hacking further on this project to implement more functionality, or learning more about the design of node/Backbone applications to better modularize & DRY up this app has a clear winner: **THE LATTER.** Ew, geeze, everything just exists in two huge files: `routes/index.js` and `public/javascripts/client.js`. THEY DON'T EVEN HAVE DESCRIPTIVE NAMES (that's because they do ten million things, each).
+
+Anyway, I'm really glad to have hacked on this challenge.  It was fun and I cannot believe how much I learned. I suspect I will continue with it, once it's been reviewed by my fate-masters.  Thanks for letting me participate :)
