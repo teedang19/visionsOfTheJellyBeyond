@@ -29,10 +29,20 @@ Now you have a mongod connection open.  Keep it open! From the app root directio
 
 Navigate to `localhost:3000` and you should be running.
 
+=======================
+
 **I had 24 hours to write this program using Backbone.js on the front-end and Node.js on the back-end.**
 
 Total experience using Backbone before this challenge: **5 hours**
-
 Total experience using Node before this challenge: **2 hours**
 
 *Wheeeeeeew.*
+
+Things I'm proud of:
++using mongoose models and schemas `models/`
++data: navigating, storing to, and retreiving from a mongoDB
++accurately fetching Backbone Models and passing them to Backbone Views
++kind-of figuring out Jade templating
++figuring out Handlebars
+
+*Every single bullet point I just listed was something I had never done before.* Most of my previous experience is building Ruby/Rails applications. I'm really happy my 
