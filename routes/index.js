@@ -108,13 +108,15 @@ module.exports = function(app) {
       }
     });
 
-    if (req.cookies.userCookie.userId) {
-      console.log("113");
-      res.render('index', { title: 'Chicago Bakery Hunt', user: true });
-    } else {
-      console.log("116");
-      res.render('index', { title: 'Chicago Bakery Hunt' });
-    }
+    res.render('index', { title: 'Chicago Bakery Hunt' });
+
+    // if (req.cookies.userCookie.userId) {
+    //   console.log("113");
+    //   res.render('index', { title: 'Chicago Bakery Hunt', user: true });
+    // } else {
+    //   console.log("116");
+      // res.render('index', { title: 'Chicago Bakery Hunt' });
+    // }
 
   });
 
