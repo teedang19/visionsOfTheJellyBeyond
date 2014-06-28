@@ -1,2 +1,5 @@
 div#login
-  h5 Here we will render login form when there is no user stored in the session cookie.
+  form(id="login-form")
+    input(type="text", name="username", placeholder="Username")
+    input(type="password", name="password", placeholder="Password")
+    input(type="submit", value="Login!")

@@ -1,21 +1,17 @@
-extends layout
+if user
+  // 'if true' for test purposes only; will be if user (to see if logged in)
+  div#instructions-box
+    h5 Please make your way to:
 
-block index
+    div.bakery-info
+      script(id='bakery-template', type='text/x-handlebars-meaningless-type')
+        h3 {{name}}
+        p Address: {{address}}
+        p Website: {{website}}
+        p Contact Name: {{contactName}}
+        p Description: {{description}}
+        p Not sure which delicious item to try? How about a {{treatDescription}}
 
-  if true
-    // 'if true' for test purposes only; will be if user (to see if logged in)
-    div#instructions-box
-      h5 Please make your way to:
-
-      div.bakery-info
-        script(id='bakery-template', type='text/x-handlebars-meaningless-type')
-          h3 Bakery Name: {{name}}
-          p Address: {{address}}
-          p Website: {{website}}
-          p Contact Name: {{contactName}}
-          p Description: {{description}}
-          p Not sure which delicious item to try? How about a {{treatDescription}}
-
-      include form
-  else
-    include login
+    include form
+else
+  include login
