@@ -1,8 +1,5 @@
 $(function() {
-  new AppRouter();
+  var router = new AppRouter();
+  new LoginView();
   Backbone.history.start();
 });
-
-// check to see if a user is logged in. SESSIONS?
-// if not, render login page
-// if so, redirect to bakery start ...

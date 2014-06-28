@@ -76,7 +76,6 @@ function createBakeries() {
 module.exports = function(app) {
 
   app.get('/', function(req, res) {
-
     User.find({}, function(err, allUsers) {
       if (err) {
         // please god implement some error handling
@@ -109,7 +108,14 @@ module.exports = function(app) {
       }
     });
 
-    res.render('index', { title: 'Chicago Bakery Hunt' });
+    if (req.cookies.userCookie.userId) {
+      console.log("113");
+      res.render('index', { title: 'Chicago Bakery Hunt', user: true });
+    } else {
+      console.log("116");
+      res.render('index', { title: 'Chicago Bakery Hunt' });
+    }
+
   });
 
   app.get('/bakeries/:name', function(req, res) {
@@ -122,6 +128,23 @@ module.exports = function(app) {
     })
   });
 
+  app.get('/users/:username', function(req, res){
+    User.findOne({"username":req.params.username}, function(err, user){
+      if(err){
+        console.log(err);
+      } else {
+        if (user.password == req.query.password) {
+          res.cookie('userCookie', {'userId': '1234'});
+          // res.send();
+        } else {
+          console.log("false yo");
+          return false;
+        }
+      }
+      res.redirect('');
+    })
+  });
+
   app.get('/admin/users', function(req, res){
     User.find({}, function(err, allUsers) {
       if (err) {
@@ -130,11 +153,6 @@ module.exports = function(app) {
         res.json(allUsers);
       }
     })
-  });
-
-  app.post('/users', function(req, res){
-    // console.log(req);
-    // console.log("XXXXXXXXX");
   });
 
 }

@@ -1,4 +1,5 @@
 var express = require('express');
+// var session = require('express-session');
 var path = require('path');
 var favicon = require('static-favicon');
 var logger = require('morgan');
@@ -27,10 +28,10 @@ app.use(bodyParser.urlencoded());
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-// GIVEN, not using:
-
-// app.use('/', routes);
-// app.use('/users', users);
+app.use(function(req, res, next){
+    res.cookie('userCookie', {'userId': null});
+    res.cookie('userCookie', {'genId': function(req) {return genuuid();}})
+});
 
 /// catch 404 and forward to error handler
 app.use(function(req, res, next) {
