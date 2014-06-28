@@ -1,4 +1,4 @@
 visionsOfTheJellyBeyond
 =======================
 
-For the fantastic folks at Jellyvision: I give you ALL OF MEEEEEEEE
+`git clone https://github.com/teedang19/visionsOfTheJellyBeyond.git`
