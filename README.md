@@ -65,4 +65,4 @@ I'm trying to strike a balance between learning a new language/framework and usi
 
 I'm really glad to have hacked on this challenge.  It was fun and I cannot believe how much I learned. I suspect I will continue with it, once it's been reviewed by my fate-masters.  Thank you for letting me participate :)
 
-[twitter](www.twitter.com/tamatojuice)  |  [website](www.tamatojuice.com)  |  [linkedIn](www.linkedin.com/in/tamtdang) 
+[twitter](twitter.com/tamatojuice)  |  [website](tamatojuice.com)  |  [linkedIn](linkedin.com/in/tamtdang) 
