@@ -41,8 +41,15 @@ Total experience using Node before this challenge: **2 hours**
 **Things I'm proud of:**  
 + effectively using mongoose models and schemas: `models/`
 + data: navigating, storing to, and retreiving from a mongoDB
-+ accurately fetching Backbone Models and passing them to Backbone Views
++ fetching Backbone Models and passing them to Backbone Views
++ rendering those Backbone Views!
 + kind-of figuring out Jade templating
 + using Handlebars
 
-*Every single bullet point I just listed was something I had never done before.* Most of my previous experience is building Ruby/Rails applications. I'm really freakin' happy that my front-end talks to my back-end.
+*Every bullet point I just listed was something I had never done before.* Most of my previous experience is building Ruby/Rails applications. I still can't believe that my back-end and front-end talk friendly to each other. I'm a proud little learner.
+
+**Huge Road Blocks:**
++ SESSIONS & cookie storage.  
+what .. the .. *hell.* I've been spoiled by the Sinatra / Rails SessionsHelper. Someone, please build this in node.
++ General understanding of Backbone.js
+anyone can read the docs and hack together some models, pass them to a view ... but what is *truly* going on?
