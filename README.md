@@ -29,7 +29,7 @@ Now you have a mongod connection open.  Keep it open! From the app root directio
 
 Navigate to `localhost:3000` and you should be running.
 
-###I had 24 hours to write this program using Backbone.js on the front-end and Node.js on the back-end.
-###Total experience using Backbone before this challenge: 5 hours
-###Total experience using Node before this challenge: 2 hours
-###Wheeeeeeew
+**I had 24 hours to write this program using Backbone.js on the front-end and Node.js on the back-end.**
+Total experience using Backbone before this challenge: **5 hours**
+Total experience using Node before this challenge: **2 hours**
+#####Wheeeeeeew
